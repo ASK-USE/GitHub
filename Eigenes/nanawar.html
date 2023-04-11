@@ -16,9 +16,10 @@
         let KEY_SPACE = false; // 32
         let KEY_UP = false; // 38
         let KEY_DOWN = false; // 40
-        let canvas;
+        let canvas = document.getElementById('canvas');
         let ctx;  
-        let backgroundImage = new 
+        let backgroundImage = new Image();
+     
 
         let bananas = {
             x: 100,
@@ -76,19 +77,19 @@
         
         function startGame(){
             canvas = document.getElementById("canvas");
-            ctx = canvas.getContext("2d");          
+            ctx = canvas.getContext('2d');         
             loadImages();
             draw();   
-          // calculate
+          
         }
 
         function loadImages(){
             backgroundImage.src = 'pics\forest-67286_960_720.jpg';
-            bananas.pics = new Image();
-            bananas.pics.src = bananas.src; 
+            bananas.img = new Image();
+            bananas.img.src = bananas.src; 
             
-            monkey.pics = new Image();
-            monkey.pics.src = monkey.src;
+            monkey.img = new Image();
+            monkey.img.src = monkey.src;
             
         }
 
