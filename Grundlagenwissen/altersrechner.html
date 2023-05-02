@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="birthdate">Birth Date:</label>
+        <input type="date" id="birthdate" name="birthdate"><br><br>
+        <button type="button" onclick="calculateAge()">Calculate Age</button><br><br>
+        <label for="age">Age:</label>
+        <output id="age"></output>
+      </form>
+      
+      <script>
+      function calculateAge() {
+        const name = document.getElementById("name").value;
+        const birthdate = new Date(document.getElementById("birthdate").value);
+        const actualYear = new Date().getFullYear();
+        const age = actualYear - birthdate.getFullYear();
+        document.getElementById("age").value = name + " is actually " + age + " years old";
+      }
+      </script>
+    
+</body>
+</html>
